@@ -16,7 +16,7 @@ dotenv.config();
 
 const { MONGO_URL } = process.env;
 
-app.use(express.json());
+app.use(express.json());  
 
 // mongoo connection
 mongoose
