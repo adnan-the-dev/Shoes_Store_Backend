@@ -3,7 +3,7 @@ const AddiasProduct = require("./modles/ShoesProducts");
 const Orders = require("./modles/placeOrder");
 const mongoose = require("mongoose");
 const express = require("express");
-const cors = require("cors");
+var cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const bcypt = require("bcrypt");
@@ -16,7 +16,7 @@ dotenv.config();
 
 const { MONGO_URL } = process.env;
 
-app.use(express.json());    
+app.use(express.json());
 
 // mongoo connection
 mongoose
