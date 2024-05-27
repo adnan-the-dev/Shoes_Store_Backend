@@ -3,7 +3,7 @@ const AddiasProduct = require("./modles/ShoesProducts");
 const Orders = require("./modles/placeOrder");
 const mongoose = require("mongoose");
 const express = require("express");
-const cors = require("cors");
+const cors = require("cors"); 
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const bcypt = require("bcrypt");
@@ -11,6 +11,7 @@ const bcypt = require("bcrypt");
 const app = express();
 app.use(cors());
 app.use(morgan("common"));
+
 
 dotenv.config();
 
