@@ -7,7 +7,7 @@ const express = require("express");
 // const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
-const bcypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 const cors = require("cors");
 
 const app = express();
@@ -37,8 +37,8 @@ mongoose
 
 app.post("/register", async (req, res) => {
   try {
-    const salt = await bcypt.genSalt(10);
-    const bcryptPssword = await bcypt.hash(req.body.password, salt);
+    const salt = await bcrypt.genSalt(10);
+    const bcryptPssword = await bcrypt.hash(req.body.password, salt);
     const user = new Users({
       username: req.body.username,
       password: bcryptPssword,
