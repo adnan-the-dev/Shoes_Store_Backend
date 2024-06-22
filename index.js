@@ -206,3 +206,11 @@ app.get("/orders/:id", async (req, res) => {
     return res.json(e);
   }
 });
+
+
+app.get("/", async (req, res) => {
+  res.json({
+    message:"server is running"
+  })
+    
+});
