@@ -67,7 +67,7 @@ app.post("/login/user", async (req, res) => {
       return res.status(404).send("This email doesn't exist.");
     }
 
-    const UserPassword = await bcypt.compare(req.body.password, user.password);
+    const UserPassword = await bcrypt.compare(req.body.password, user.password);
     if (!UserPassword) {
       return res.status(400).send("The password provided is incorrect.");
     }
