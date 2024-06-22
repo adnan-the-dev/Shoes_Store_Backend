@@ -6,7 +6,7 @@ const express = require("express");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const bcrypt = require("bcrypt");
-const cors = require("cors");
+var cors = require("cors");
 
 const app = express();
 app.use(cors());
